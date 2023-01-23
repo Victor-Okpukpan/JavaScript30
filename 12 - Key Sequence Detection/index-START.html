@@ -7,6 +7,22 @@
 </head>
 <body>
 <script>
+  const array = [];
+  const code = 'khalifa';
+
+  function cornify(e) {
+    array.push(e.key);
+    array.splice(-code.length - 1, array.length - code.length);
+    console.log(array);
+    
+
+    if(array.join('').includes(code)){
+      cornify_add();
+    }
+  }
+
+  window.addEventListener('keyup', cornify);
+
 </script>
 </body>
 </html>
